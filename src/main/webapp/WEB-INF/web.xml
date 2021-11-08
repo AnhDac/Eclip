@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+
+   <display-name>Archetype Created Web Application</display-name>
+  <listener>
+		<listener-class>org.apache.tiles.extras.complete.CompleteAutoloadTilesListener
+		</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>Tiles Dispatch</servlet-name>
+		<servlet-class>org.apache.tiles.web.util.TilesDispatchServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ContentServlet</display-name>
+		<servlet-name>ContentServlet</servlet-name>
+		<servlet-class>controller.ContentServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ContenServlet</display-name>
+		<servlet-name>ContenServlet</servlet-name>
+		<servlet-class>controller.ContenServlet</servlet-class>
+	</servlet>
+	<servlet>
+  	<description></description>
+  	<display-name>GetUserServlet</display-name>
+  	<servlet-name>GetUserServlet</servlet-name>
+  	<servlet-class>controller.GetUserServlet</servlet-class>
+  </servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>Index3Servlet</display-name>
+		<servlet-name>Index3Servlet</servlet-name>
+		<servlet-class>controller.Index3Servlet</servlet-class>
+	</servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>GetUserServlet</servlet-name>
+  	<url-pattern>/GetUserServlet</url-pattern>
+  </servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Tiles Dispatch</servlet-name>
+		<url-pattern>*.tiles</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ContentServlet</servlet-name>
+		<url-pattern>/ContentServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ContenServlet</servlet-name>
+		<url-pattern>/ContenServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Index3Servlet</servlet-name>
+		<url-pattern>/Index3Servlet</url-pattern>
+	</servlet-mapping>
+</web-app>
